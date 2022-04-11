@@ -74,7 +74,7 @@ section.home{
      right:0;
      width: 60px;
      height:60px;
-     background:var(--primary-color)url(../images/menu.png);
+     background:var(--primary-color) url(../images/menu.png);
      background-size: 30px;
      border-radius:0 0 4px 4px;
      background-position: center;
@@ -85,9 +85,9 @@ section.home{
 
 .toggle.active{
     position:fixed;
-    background:var(--primary-color)url(../images/close.png);
+    background:var(--primary-color) url(../images/close.png);
     background-size: 25px;
-     border-radius:0 0 4px 4px;
+     border-radius: 4px;
      background-position: center;
      background-repeat: no-repeat;
 
@@ -99,22 +99,34 @@ section.home{
     background-color: #e6333f;
 }
 .home-content{
+    width: 100%;
     position:relative;
     z-index:10 ;
-    max-width:600px ;
 }
 
-.home-content p{
+.home-content h1{
+    font-weight: 600;
+    color: rgb(255, 52, 52);
+    width: 100%;
+    font-size: 55px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+.home-content p{ 
+    width: 40%;
     margin: 5px;
     text-justify: relative;
     margin-top: 20px;
+    font-size: 16px;
 }
 
 .home-img{
     position: absolute;
     bottom: 0;
     right: 0;
-    height: 110% ;
+    height: 180%;
+    filter: opacity(0.8);
 }
 
 .navigation{
@@ -135,16 +147,16 @@ section.home{
 
 .navigation ul{
     position: active;
-
+    line-height: 1.8;
 }
 .navigation ul li{
     position: relative;
     list-style:none;
     text-align: center;
-
 }
 
 .navigation ul li a{
+    letter-spacing: 9px;
     font-size: 3rem;
     text-decoration: none;
     font-weight: 100;
@@ -183,7 +195,7 @@ section.home{
     grid-template-columns:repeat(3, 1fr);
     gap:40px;
     text-align: center;
-}
+} 
 
 .services .service{
     padding: 30px;
@@ -204,36 +216,12 @@ section.home{
 }
 
 .services .service .icon img{
-max-width: 100px;}
-
-@media(max-width:1068px){
-    .home-img{
-        display: none;
+    max-width: 100px;
     }
 
-    .logo{
-        top:10px;
-        left:40px;
-        font-size: 1.5rem;
-    }
-
-    section{
-        padding: 100px 40px;
-    }
-
-    .navigation ul li a{
-        font-size:2rem;
-    }
-    .services{
-     margin-top: 40px;
-    display: grid;
-    grid-template-columns:repeat(2, 1fr);
-    gap:40px;
-    text-align: center;
-    }
-}
 
 .portfolio{
+    gap: 30px;
     display: flex;
     flex-wrap: wrap;
     margin-top: 20px;
@@ -279,106 +267,56 @@ max-width: 100px;}
     padding: 5px 15px;
 }
 
-.contact {
-    position: relative;
-    width: 100%;
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  
-  .contact-form {
-    position: relative;
-    background: #f9f9f9;
-    width: calc(100% - 400px);
-    padding: 60px 40px 20px;
-  }
-  
-  .contact-form form {
-    width: 100%;
-  }
-  
-  .contact-form .row {
-    width: 100%;
-    display: flex;
-  }
-  
-  .contact-form .input50 {
-    width: 50%;
-    margin: 0 10px;
-  }
-  
-  .contact-form .input100 {
-    width: 100%;
-    margin: 0 10px;
-  }
-  
-  .contact-form .row input,
-  .contact-form .row textarea {
-    position: relative;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    color: #111;
-    background: transparent;
-    width: 100%;
-    padding: 10px;
-    outline: none;
-    font-size: 16px;
-    font-weight: 300;
-    margin: 10px 0;
-    resize: none;
-  }
-  
-  .contact-form .row textarea {
-    height: 150px;
-  }
-  
-  .contact-form .row input[type='submit'] {
-    background-color: var(--secondary-color);
-    color: #fff;
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 300;
-    border: 0;
-    cursor: pointer;
-  }
-  
-  .contact-info {
-    width: 350px;
-    background: #f9f9f9;
-    padding: 60px 40px 20px;
-  }
-  
-  .contact-info .info-box {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 40px;
-  }
-  
-  .contact-info .info-box .contact-icon {
-    width: 20px;
-    margin-right: 40px;
-  }
-  
-  .contact-info .info-box .details h4 {
-    color: var(--secondary-color);
-  }
-  
-  .contact-info .info-box .details p,
-  .contact-info .info-box .details a {
-    color: #111;
-  }
+.title h1 {
+    color: #fd4141;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.title p {
+    width: 45%;
+}
+
 
 @media(max-width:768px){
+
     .services{
         margin-top: 40px;
+        display: grid;
+        grid-template-columns:1fr;
+        gap:40px;
+        text-align: center;
+    }
+    
+    .services .service {
+        box-shadow:0 10px 10px rgba(181, 101, 255, 0.541);
+    }
+}
+
+
+@media(max-width:1068px){
+    .home-img{
+        display: none;
+    }
+
+    .logo{
+        top:10px;
+        left:40px;
+        font-size: 1.5rem;
+    }
+
+    section{
+        padding: 100px 40px;
+    }
+
+    .navigation ul li a{
+        font-size:2rem;
+    }
+    .services{
+     margin-top: 40px;
     display: grid;
-    grid-template-columns:1fr;
+    grid-template-columns:repeat(2, 1fr);
     gap:40px;
     text-align: center;
-    }
-    .services .service{
-        box-shadow:0 10px 10px rgba(181, 101, 255, 0.541);
     }
 }
